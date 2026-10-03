@@ -30,9 +30,9 @@ export default function Navbar() {
               <Image 
                 src="/logo-white.png" 
                 alt="Titto's X Fashion Planet" 
-                width={120} 
-                height={45} 
-                className="h-8 md:h-10 w-auto object-contain drop-shadow-md"
+                width={240} 
+                height={90} 
+                className="h-12 sm:h-14 md:h-16 lg:h-20 w-auto object-contain drop-shadow-xl"
                 priority
               />
             </Link>
@@ -79,9 +79,9 @@ export default function Navbar() {
             <Image 
               src="/logo-white.png" 
               alt="Titto's X Fashion Planet" 
-              width={120} 
-              height={45} 
-              className="h-10 w-auto object-contain"
+              width={200} 
+              height={75} 
+              className="h-14 md:h-16 w-auto object-contain"
             />
           </Link>
           <button onClick={() => setIsOpen(false)} className="text-white hover:text-gray-400 transition-colors">
