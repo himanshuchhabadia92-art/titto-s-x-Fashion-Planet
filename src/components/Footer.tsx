@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -7,7 +8,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
             <Link href="/" className="inline-block mb-4">
-              <span className="font-serif font-bold text-2xl tracking-tighter">Titto's X Fashion Planet</span>
+              <Image 
+                src="/logo-white.png" 
+                alt="Titto's X Fashion Planet" 
+                width={140} 
+                height={55} 
+                className="h-12 w-auto object-contain"
+              />
             </Link>
             <p className="text-gray-400 text-sm max-w-sm">
               Elevating everyday essentials. A premium destination for curated fashion in monochrome elegance.

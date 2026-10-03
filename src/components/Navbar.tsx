@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { ShoppingBag, Search, Zap, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
@@ -25,8 +26,15 @@ export default function Navbar() {
             <button onClick={() => setIsOpen(!isOpen)} aria-label="Toggle Menu" className="text-white p-2 -ml-2 hover:text-gray-300 transition-colors drop-shadow-md">
               {isOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
-            <Link href="/" className="font-display font-black text-xl md:text-2xl tracking-tighter text-white drop-shadow-md">
-              TITTO'S
+            <Link href="/" className="flex items-center">
+              <Image 
+                src="/logo-white.png" 
+                alt="Titto's X Fashion Planet" 
+                width={120} 
+                height={45} 
+                className="h-8 md:h-10 w-auto object-contain drop-shadow-md"
+                priority
+              />
             </Link>
           </div>
 
@@ -67,7 +75,15 @@ export default function Navbar() {
       <div className={`fixed top-0 left-0 h-full w-[320px] bg-black z-[110] transform transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : '-translate-x-full'} shadow-2xl`}>
         {/* Sidebar Header */}
         <div className="flex items-center justify-between px-6 py-6 border-b border-gray-800">
-          <Link href="/" onClick={() => setIsOpen(false)} className="font-display font-black text-2xl tracking-tighter text-white">TITTO'S</Link>
+          <Link href="/" onClick={() => setIsOpen(false)} className="flex items-center">
+            <Image 
+              src="/logo-white.png" 
+              alt="Titto's X Fashion Planet" 
+              width={120} 
+              height={45} 
+              className="h-10 w-auto object-contain"
+            />
+          </Link>
           <button onClick={() => setIsOpen(false)} className="text-white hover:text-gray-400 transition-colors">
             <X size={28} />
           </button>
