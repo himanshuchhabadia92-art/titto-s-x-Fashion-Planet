@@ -35,17 +35,27 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
       <section className="relative h-[100svh] w-full flex flex-col justify-between overflow-hidden bg-black pt-6">
-        {/* Background Image */}
+        {/* Background Image: Mobile 9:16 vs Desktop 16:9 */}
         <div className="absolute inset-0 z-0 w-full h-full">
+           {/* Mobile Portrait Hero Background */}
+           <Image 
+             src="/hero-bg-mobile.jpg" 
+             alt="Titto's Streetwear Models and Porsche Mobile" 
+             fill 
+             sizes="100vw"
+             className="block md:hidden object-cover object-top animate-slow-zoom"
+             priority
+           />
+           {/* Desktop Widescreen Hero Background */}
            <Image 
              src="/hero-bg-animated.jpg" 
              alt="Diverse Streetwear Models with Vintage Porsche and Titto's Wall" 
              fill 
              sizes="100vw"
-             className="object-cover object-center animate-slow-zoom"
+             className="hidden md:block object-cover object-center animate-slow-zoom"
              priority
            />
-           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60 pointer-events-none z-10" />
+           <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/70 pointer-events-none z-10" />
         </div>
 
         {/* The top navigation is handled by Navbar component */}
