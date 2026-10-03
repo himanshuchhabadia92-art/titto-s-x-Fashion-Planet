@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-oswald);
+
+  --color-brand-black: #0a0a0a;
+  --color-brand-white: #fafafa;
+  --color-brand-gray: #888888;
+}
+
+:root {
+  --foreground: var(--color-brand-black);
+  --background: var(--color-brand-white);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground: var(--color-brand-white);
+    --background: var(--color-brand-black);
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-sans), sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--foreground);
+  color: var(--background);
+}
+
+.premium-transition {
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
+}
+
+.animate-marquee {
+  animation: marquee 15s linear infinite;
+}
+
+@keyframes slow-zoom {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+.animate-slow-zoom {
+  animation: slow-zoom 30s ease-in-out infinite;
+  will-change: transform;
+}
+
+.funky-heading {
+  -webkit-text-stroke: 2px white;
+  color: transparent;
+  transition: all 0.3s ease;
+}
+
+.funky-heading:hover {
+  -webkit-text-stroke: 0px;
+  color: white;
+}
+
+.funky-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.funky-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #8cc665, #f5e642, #ff6b6b);
+  transform: skewX(-12deg);
+}
+
+@keyframes marquee-vertical {
+  0% { transform: translateY(0%); }
+  100% { transform: translateY(-50%); }
+}
+
+@keyframes marquee-vertical-reverse {
+  0% { transform: translateY(-50%); }
+  100% { transform: translateY(0%); }
+}
+
+.animate-marquee-vertical {
+  animation: marquee-vertical 20s linear infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float 6s ease-in-out infinite;
+  animation-delay: 3s;
+}
