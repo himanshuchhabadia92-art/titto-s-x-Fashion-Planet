@@ -28,11 +28,11 @@ export default function Navbar() {
             </button>
             <Link href="/" className="flex items-center">
               <Image 
-                src="/logo-wide-white.png" 
+                src="/logo-white.png" 
                 alt="Titto's X Fashion Planet" 
-                width={320} 
-                height={90} 
-                className="h-10 sm:h-12 md:h-14 lg:h-16 w-auto object-contain drop-shadow-xl"
+                width={200} 
+                height={80} 
+                className="h-12 sm:h-14 md:h-18 lg:h-20 w-auto object-contain drop-shadow-xl"
                 priority
               />
             </Link>
@@ -77,11 +77,11 @@ export default function Navbar() {
         <div className="flex items-center justify-between px-6 py-6 border-b border-gray-800">
           <Link href="/" onClick={() => setIsOpen(false)} className="flex items-center">
             <Image 
-              src="/logo-wide-white.png" 
+              src="/logo-white.png" 
               alt="Titto's X Fashion Planet" 
-              width={260} 
-              height={75} 
-              className="h-10 md:h-12 w-auto object-contain"
+              width={160} 
+              height={65} 
+              className="h-14 md:h-16 w-auto object-contain"
             />
           </Link>
           <button onClick={() => setIsOpen(false)} className="text-white hover:text-gray-400 transition-colors">

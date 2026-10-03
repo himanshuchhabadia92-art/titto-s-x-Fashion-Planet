@@ -9,11 +9,11 @@ export default function Footer() {
           <div className="col-span-1 md:col-span-2">
             <Link href="/" className="inline-block mb-4">
               <Image 
-                src="/logo-wide-white.png" 
+                src="/logo-white.png" 
                 alt="Titto's X Fashion Planet" 
-                width={260} 
-                height={75} 
-                className="h-12 w-auto object-contain"
+                width={160} 
+                height={65} 
+                className="h-14 w-auto object-contain"
               />
             </Link>
             <p className="text-gray-400 text-sm max-w-sm">
