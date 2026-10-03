@@ -20,15 +20,14 @@ export default function Navbar() {
     )}>
       <div className="container mx-auto px-4 md:px-12">
         <div className="flex items-center justify-between">
-          {/* Left: Hamburger Menu & Mobile Logo */}
-          <div className="flex items-center space-x-4">
-            <button onClick={() => setIsOpen(!isOpen)} className="text-white p-2 -ml-2 hover:text-gray-300 transition-colors drop-shadow-md">
+          {/* Left: Hamburger Menu & Logo */}
+          <div className="flex items-center space-x-3 md:space-x-4">
+            <button onClick={() => setIsOpen(!isOpen)} aria-label="Toggle Menu" className="text-white p-2 -ml-2 hover:text-gray-300 transition-colors drop-shadow-md">
               {isOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
-            {/* Logo for non-home pages (always visible on left) */}
-            {!isHome && (
-              <Link href="/" className="font-display font-black text-2xl tracking-tighter text-white">TITTO'S</Link>
-            )}
+            <Link href="/" className="font-display font-black text-xl md:text-2xl tracking-tighter text-white drop-shadow-md">
+              TITTO'S
+            </Link>
           </div>
 
           {/* Center: Navigation Links (Desktop) */}

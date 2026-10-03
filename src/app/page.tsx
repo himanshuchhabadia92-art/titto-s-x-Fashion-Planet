@@ -50,14 +50,27 @@ export default function Home() {
 
         {/* The top navigation is handled by Navbar component */}
         
+        {/* Center Hero Headline Overlay */}
+        <div className="relative z-20 flex flex-col items-center justify-center text-center px-4 pt-24 sm:pt-28 md:pt-36">
+          <span className="text-[#8cc665] text-[10px] sm:text-xs font-black uppercase tracking-[0.3em] mb-3 bg-black/70 px-4 py-1.5 rounded-full border border-[#8cc665]/40 backdrop-blur-sm">
+            Urban Streetwear 2024
+          </span>
+          <h1 className="text-5xl sm:text-7xl md:text-8xl font-display font-black text-white uppercase tracking-tighter drop-shadow-[0_5px_15px_rgba(0,0,0,0.9)] italic -skew-x-6">
+            TITTO'S
+          </h1>
+          <p className="text-white/90 text-xs sm:text-sm md:text-lg font-bold uppercase tracking-widest mt-3 max-w-md drop-shadow-md">
+            Anime • Mythology • Graphic Culture
+          </p>
+        </div>
+
         {/* Spacer to push the button down */}
         <div className="flex-grow pointer-events-none"></div>
 
         {/* Shop Now Button */}
-        <div className="relative z-20 flex justify-center pb-12 md:pb-20">
+        <div className="relative z-20 flex justify-center pb-8 sm:pb-12 md:pb-16">
            <Link 
               href="/collections/all" 
-              className="bg-[#8cc665] text-black px-12 py-4 text-lg md:text-xl font-medium hover:bg-[#7ab056] transition-colors shadow-lg uppercase tracking-widest border border-black"
+              className="bg-[#8cc665] text-black px-10 py-3.5 sm:px-12 sm:py-4 text-base sm:text-lg md:text-xl font-bold hover:bg-[#7ab056] transition-colors shadow-lg uppercase tracking-widest border border-black rounded-none"
             >
               Shop now
             </Link>
@@ -86,42 +99,42 @@ export default function Home() {
       </div>
 
       {/* New Arrivals Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 container mx-auto">
-        <div className="mb-12 border-b-4 border-foreground pb-4 flex justify-between items-end">
-          <h2 className="text-5xl font-display font-black tracking-tight text-foreground uppercase">New Arrivals</h2>
+      <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 container mx-auto">
+        <div className="mb-8 sm:mb-12 border-b-4 border-foreground pb-4 flex justify-between items-end">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-black tracking-tight text-foreground uppercase">New Arrivals</h2>
           <Link href="/collections/all" className="hidden md:flex text-sm font-bold uppercase tracking-widest items-center hover:underline">
             View All <ArrowRight size={16} className="ml-2" />
           </Link>
         </div>
         
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
           {newArrivals.map((item) => (
             <Link href={`/collections/all/${item.id}`} key={item.id} className="group cursor-pointer block">
-              <div className="relative aspect-[3/4] bg-gray-100 mb-4 overflow-hidden border border-gray-200">
+              <div className="relative aspect-[3/4] bg-gray-100 mb-3 sm:mb-4 overflow-hidden border border-gray-200">
                 <div 
                   className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" 
                   style={{ backgroundImage: `url(${item.image})` }}
                 />
-                <div className="absolute top-3 left-3 bg-white text-black px-3 py-1 text-xs font-black tracking-widest uppercase border border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
+                <div className="absolute top-2 left-2 sm:top-3 sm:left-3 bg-white text-black px-2 py-0.5 sm:px-3 sm:py-1 text-[10px] sm:text-xs font-black tracking-widest uppercase border border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
                   SALE
                 </div>
               </div>
-              <h3 className="text-sm md:text-base font-display font-bold text-foreground uppercase tracking-wide leading-tight">{item.name}</h3>
-              <p className="text-gray-600 font-bold mt-1 text-sm">{item.price}</p>
+              <h3 className="text-xs sm:text-sm md:text-base font-display font-bold text-foreground uppercase tracking-wide leading-tight">{item.name}</h3>
+              <p className="text-gray-600 font-bold mt-1 text-xs sm:text-sm">{item.price}</p>
             </Link>
           ))}
         </div>
       </section>
 
       {/* Collections Section */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 container mx-auto border-t border-gray-100">
-        <h2 className="text-4xl md:text-5xl font-black tracking-tight text-foreground mb-12">Collections</h2>
+      <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 container mx-auto border-t border-gray-100">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-foreground mb-8 sm:mb-12">Collections</h2>
         
         {/* Top Row: 3 columns */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-6 sm:mb-8">
           {/* Collection 1: T-Shirts */}
           <Link href="/collections/tshirts" className="group cursor-pointer block">
-            <div className="relative aspect-square bg-gray-900 mb-6 overflow-hidden">
+            <div className="relative aspect-square bg-gray-900 mb-4 sm:mb-6 overflow-hidden">
               <Image 
                 src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=1600&auto=format&fit=crop" 
                 alt="Unisex T-Shirts" 
@@ -129,14 +142,14 @@ export default function Home() {
                 className="object-cover group-hover:scale-105 transition-transform duration-700" 
               />
             </div>
-            <h3 className="text-xl font-bold text-foreground flex items-center hover:underline">
+            <h3 className="text-lg sm:text-xl font-bold text-foreground flex items-center hover:underline">
               Unisex T-Shirts <ArrowRight size={20} className="ml-2" />
             </h3>
           </Link>
 
           {/* Collection 2: Hoodies */}
           <Link href="/collections/hoodies" className="group cursor-pointer block">
-            <div className="relative aspect-square bg-gray-900 mb-6 overflow-hidden">
+            <div className="relative aspect-square bg-gray-900 mb-4 sm:mb-6 overflow-hidden">
               <Image 
                 src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?q=80&w=1587&auto=format&fit=crop" 
                 alt="Unisex Hoodies" 
@@ -144,14 +157,14 @@ export default function Home() {
                 className="object-cover group-hover:scale-105 transition-transform duration-700" 
               />
             </div>
-            <h3 className="text-xl font-bold text-foreground flex items-center hover:underline">
+            <h3 className="text-lg sm:text-xl font-bold text-foreground flex items-center hover:underline">
               Unisex Hoodies <ArrowRight size={20} className="ml-2" />
             </h3>
           </Link>
 
           {/* Collection 3: Jeans */}
           <Link href="/collections/jeans" className="group cursor-pointer block">
-            <div className="relative aspect-square bg-gray-900 mb-6 overflow-hidden">
+            <div className="relative aspect-square bg-gray-900 mb-4 sm:mb-6 overflow-hidden">
               <Image 
                 src="https://images.unsplash.com/photo-1542272604-780c8d47b096?q=80&w=1736&auto=format&fit=crop" 
                 alt="Unisex Jeans" 
@@ -159,40 +172,40 @@ export default function Home() {
                 className="object-cover group-hover:scale-105 transition-transform duration-700" 
               />
             </div>
-            <h3 className="text-xl font-bold text-foreground flex items-center hover:underline">
+            <h3 className="text-lg sm:text-xl font-bold text-foreground flex items-center hover:underline">
               Unisex Jeans <ArrowRight size={20} className="ml-2" />
             </h3>
           </Link>
         </div>
 
         {/* Bottom Row: 2 columns (wider cards) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           {/* Collection 4: Bestsellers */}
           <Link href="/collections/bestsellers" className="group cursor-pointer block">
-            <div className="relative aspect-[16/9] bg-gray-900 mb-6 overflow-hidden">
+            <div className="relative aspect-[16/9] bg-gray-900 mb-4 sm:mb-6 overflow-hidden">
               <Image 
                 src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1600&auto=format&fit=crop" 
                 alt="Bestsellers" 
                 fill 
                 className="object-cover group-hover:scale-105 transition-transform duration-700" 
               />
-              <div className="absolute inset-0 bg-black/30 flex items-end p-8">
-                <span className="text-white text-3xl md:text-4xl font-black uppercase tracking-tight">Bestsellers 🔥</span>
+              <div className="absolute inset-0 bg-black/40 flex items-end p-4 sm:p-8">
+                <span className="text-white text-xl sm:text-3xl md:text-4xl font-black uppercase tracking-tight">Bestsellers 🔥</span>
               </div>
             </div>
           </Link>
 
           {/* Collection 5: New Arrivals */}
           <Link href="/collections/new-arrivals" className="group cursor-pointer block">
-            <div className="relative aspect-[16/9] bg-gray-900 mb-6 overflow-hidden">
+            <div className="relative aspect-[16/9] bg-gray-900 mb-4 sm:mb-6 overflow-hidden">
               <Image 
                 src="https://images.unsplash.com/photo-1490114538077-0a7f8cb49891?q=80&w=1600&auto=format&fit=crop" 
                 alt="New Arrivals" 
                 fill 
                 className="object-cover group-hover:scale-105 transition-transform duration-700" 
               />
-              <div className="absolute inset-0 bg-black/30 flex items-end p-8">
-                <span className="text-white text-3xl md:text-4xl font-black uppercase tracking-tight">New Arrivals ✨</span>
+              <div className="absolute inset-0 bg-black/40 flex items-end p-4 sm:p-8">
+                <span className="text-white text-xl sm:text-3xl md:text-4xl font-black uppercase tracking-tight">New Arrivals ✨</span>
               </div>
             </div>
           </Link>
