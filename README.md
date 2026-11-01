@@ -1,36 +1,19 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Titto's X Fashion Planet
 
-## Getting Started
+E-commerce storefront and admin panel (Next.js, Tailwind, Prisma + PostgreSQL, Razorpay, Cloudinary, Gmail SMTP).
 
-First, run the development server:
+## Setup
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. `npm install`
+2. Copy `.env.example` to `.env` and fill it in (database URL, `SESSION_SECRET`, admin login, Razorpay, Cloudinary, SMTP).
+3. `npx prisma migrate deploy` to create the tables.
+4. `npm run db:seed` creates the admin account from `ADMIN_EMAIL` / `ADMIN_PASSWORD`. On an empty database it also adds demo categories and products - delete them from the admin panel before launch.
+5. `npm run dev`, then open http://localhost:3000 (store) and http://localhost:3000/admin (admin panel).
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The database variable is called `TITTOS_DATABASE_URL`, not `DATABASE_URL`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## What's inside
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Store**: home page, collections (filter by availability / price / size, sort), product page, wishlist, cart, checkout (Razorpay online payment or cash on delivery), order confirmation email.
+- **Admin** (`/admin`): products, categories, orders (status updates email the customer), customers with purchase history.
+- Cart and wishlist are saved in the visitor's browser. Customers don't have accounts; a customer record is created from the details entered at checkout.

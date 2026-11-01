@@ -1,0 +1,536 @@
+{
+  "categories": [
+    {
+      "name": "T-Shirts",
+      "slug": "tshirts",
+      "sortOrder": 1,
+      "image": "https://res.cloudinary.com/ncsxit25/image/upload/v1793558022/tittos-fashion-planet/demo/classic-black-oversized-tee-1.jpg"
+    },
+    {
+      "name": "Shirts",
+      "slug": "shirts",
+      "sortOrder": 2,
+      "image": "https://res.cloudinary.com/ncsxit25/image/upload/v1793558030/tittos-fashion-planet/demo/white-oxford-shirt-1.jpg"
+    },
+    {
+      "name": "Hoodies",
+      "slug": "hoodies",
+      "sortOrder": 3,
+      "image": "https://res.cloudinary.com/ncsxit25/image/upload/v1793558038/tittos-fashion-planet/demo/black-heavyweight-hoodie-1.jpg"
+    },
+    {
+      "name": "Jackets",
+      "slug": "jackets",
+      "sortOrder": 4,
+      "image": "https://res.cloudinary.com/ncsxit25/image/upload/v1793558047/tittos-fashion-planet/demo/black-bomber-jacket-1.jpg"
+    },
+    {
+      "name": "Jeans",
+      "slug": "jeans",
+      "sortOrder": 5,
+      "image": "https://res.cloudinary.com/ncsxit25/image/upload/v1793558055/tittos-fashion-planet/demo/classic-indigo-straight-jeans-1.jpg"
+    },
+    {
+      "name": "Trousers",
+      "slug": "trousers",
+      "sortOrder": 6,
+      "image": "https://res.cloudinary.com/ncsxit25/image/upload/v1793558063/tittos-fashion-planet/demo/beige-chino-trousers-1.jpg"
+    },
+    {
+      "name": "Bestsellers",
+      "slug": "bestsellers",
+      "sortOrder": 7,
+      "image": "https://res.cloudinary.com/ncsxit25/image/upload/v1793558022/tittos-fashion-planet/demo/classic-black-oversized-tee-1.jpg"
+    }
+  ],
+  "products": [
+    {
+      "name": "Classic Black Oversized Tee",
+      "slug": "classic-black-oversized-tee",
+      "price": 799,
+      "description": "Heavyweight 240 GSM cotton oversized tee with a dropped shoulder and ribbed neck. A everyday essential in black.",
+      "images": [
+        "https://res.cloudinary.com/ncsxit25/image/upload/v1793558022/tittos-fashion-planet/demo/classic-black-oversized-tee-1.jpg",
+        "https://res.cloudinary.com/ncsxit25/image/upload/v1793558023/tittos-fashion-planet/demo/classic-black-oversized-tee-2.jpg"
+      ],
+      "categories": [
+        "tshirts",
+        "bestsellers"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ]
+    },
+    {
+      "name": "Off-White Boxy Tee",
+      "slug": "off-white-boxy-tee",
+      "price": 849,
+      "description": "Relaxed boxy fit in soft combed cotton. Clean, minimal and easy to layer.",
+      "images": [
+        "https://res.cloudinary.com/ncsxit25/image/upload/v1793558024/tittos-fashion-planet/demo/off-white-boxy-tee-1.jpg",
+        "https://res.cloudinary.com/ncsxit25/image/upload/v1793558025/tittos-fashion-planet/demo/off-white-boxy-tee-2.jpg"
+      ],
+      "categories": [
+        "tshirts"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ]
+    },
+    {
+      "name": "Sage Sunset Graphic Tee",
+      "slug": "sage-sunset-graphic-tee",
+      "price": 999,
+      "description": "Oversized tee with a sunset graphic on the chest, printed with high-quality DTF.",
+      "images": [
+        "https://res.cloudinary.com/ncsxit25/image/upload/v1793558026/tittos-fashion-planet/demo/sage-sunset-graphic-tee-1.jpg",
+        "https://res.cloudinary.com/ncsxit25/image/upload/v1793558027/tittos-fashion-planet/demo/sage-sunset-graphic-tee-2.jpg"
+      ],
+      "categories": [
+        "tshirts",
+        "bestsellers"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ]
+    },
+    {
+      "name": "Washed Grey Bolt Tee",
+      "slug": "washed-grey-bolt-tee",
+      "price": 899,
+      "description": "Washed grey drop-shoulder tee with a bold bolt print.",
+      "images": [
+        "https://res.cloudinary.com/ncsxit25/image/upload/v1793558028/tittos-fashion-planet/demo/washed-grey-bolt-tee-1.jpg",
+        "https://res.cloudinary.com/ncsxit25/image/upload/v1793558029/tittos-fashion-planet/demo/washed-grey-bolt-tee-2.jpg"
+      ],
+      "categories": [
+        "tshirts"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ]
+    },
+    {
+      "name": "White Oxford Shirt",
+      "slug": "white-oxford-shirt",
+      "price": 1299,
+      "description": "Classic full-sleeve oxford shirt with a button-down collar and chest pocket.",
+      "images": [
+        "https://res.cloudinary.com/ncsxit25/image/upload/v1793558030/tittos-fashion-planet/demo/white-oxford-shirt-1.jpg",
+        "https://res.cloudinary.com/ncsxit25/image/upload/v1793558031/tittos-fashion-planet/demo/white-oxford-shirt-2.jpg"
+      ],
+      "categories": [
+        "shirts"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ]
+    },
+    {
+      "name": "Sky Blue Linen Shirt",
+      "slug": "sky-blue-linen-shirt",
+      "price": 1499,
+      "description": "Breathable linen-blend shirt in sky blue. Smart enough for work, easy enough for weekends.",
+      "images": [
+        "https://res.cloudinary.com/ncsxit25/image/upload/v1793558032/tittos-fashion-planet/demo/sky-blue-linen-shirt-1.jpg",
+        "https://res.cloudinary.com/ncsxit25/image/upload/v1793558033/tittos-fashion-planet/demo/sky-blue-linen-shirt-2.jpg"
+      ],
+      "categories": [
+        "shirts",
+        "bestsellers"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ]
+    },
+    {
+      "name": "Olive Cuban Collar Shirt",
+      "slug": "olive-cuban-collar-shirt",
+      "price": 1399,
+      "description": "Short-sleeve Cuban collar shirt in olive with a relaxed, boxy drape.",
+      "images": [
+        "https://res.cloudinary.com/ncsxit25/image/upload/v1793558034/tittos-fashion-planet/demo/olive-cuban-collar-shirt-1.jpg",
+        "https://res.cloudinary.com/ncsxit25/image/upload/v1793558035/tittos-fashion-planet/demo/olive-cuban-collar-shirt-2.jpg"
+      ],
+      "categories": [
+        "shirts"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ]
+    },
+    {
+      "name": "Navy Pinstripe Shirt",
+      "slug": "navy-pinstripe-shirt",
+      "price": 1599,
+      "description": "Full-sleeve pinstripe shirt in navy with a crisp spread collar.",
+      "images": [
+        "https://res.cloudinary.com/ncsxit25/image/upload/v1793558037/tittos-fashion-planet/demo/navy-pinstripe-shirt-1.jpg",
+        "https://res.cloudinary.com/ncsxit25/image/upload/v1793558037/tittos-fashion-planet/demo/navy-pinstripe-shirt-2.jpg"
+      ],
+      "categories": [
+        "shirts"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ]
+    },
+    {
+      "name": "Black Heavyweight Hoodie",
+      "slug": "black-heavyweight-hoodie",
+      "price": 1799,
+      "description": "Heavyweight fleece pullover hoodie with a kangaroo pocket and ribbed cuffs.",
+      "images": [
+        "https://res.cloudinary.com/ncsxit25/image/upload/v1793558038/tittos-fashion-planet/demo/black-heavyweight-hoodie-1.jpg",
+        "https://res.cloudinary.com/ncsxit25/image/upload/v1793558039/tittos-fashion-planet/demo/black-heavyweight-hoodie-2.jpg"
+      ],
+      "categories": [
+        "hoodies",
+        "bestsellers"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ]
+    },
+    {
+      "name": "Charcoal Pullover Hoodie",
+      "slug": "charcoal-pullover-hoodie",
+      "price": 1699,
+      "description": "Soft brushed-fleece hoodie in charcoal. Warm without feeling bulky.",
+      "images": [
+        "https://res.cloudinary.com/ncsxit25/image/upload/v1793558040/tittos-fashion-planet/demo/charcoal-pullover-hoodie-1.jpg",
+        "https://res.cloudinary.com/ncsxit25/image/upload/v1793558041/tittos-fashion-planet/demo/charcoal-pullover-hoodie-2.jpg"
+      ],
+      "categories": [
+        "hoodies"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ]
+    },
+    {
+      "name": "Cream Oversized Hoodie",
+      "slug": "cream-oversized-hoodie",
+      "price": 1899,
+      "description": "Oversized cream hoodie with a roomy hood and dropped shoulders.",
+      "images": [
+        "https://res.cloudinary.com/ncsxit25/image/upload/v1793558042/tittos-fashion-planet/demo/cream-oversized-hoodie-1.jpg",
+        "https://res.cloudinary.com/ncsxit25/image/upload/v1793558043/tittos-fashion-planet/demo/cream-oversized-hoodie-2.jpg"
+      ],
+      "categories": [
+        "hoodies"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ]
+    },
+    {
+      "name": "Forest Green Hoodie",
+      "slug": "forest-green-hoodie",
+      "price": 1799,
+      "description": "Deep forest green pullover hoodie with drawstring hood.",
+      "images": [
+        "https://res.cloudinary.com/ncsxit25/image/upload/v1793558045/tittos-fashion-planet/demo/forest-green-hoodie-1.jpg",
+        "https://res.cloudinary.com/ncsxit25/image/upload/v1793558046/tittos-fashion-planet/demo/forest-green-hoodie-2.jpg"
+      ],
+      "categories": [
+        "hoodies"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ]
+    },
+    {
+      "name": "Black Bomber Jacket",
+      "slug": "black-bomber-jacket",
+      "price": 2999,
+      "description": "Classic zip-up bomber with ribbed collar, cuffs and hem.",
+      "images": [
+        "https://res.cloudinary.com/ncsxit25/image/upload/v1793558047/tittos-fashion-planet/demo/black-bomber-jacket-1.jpg",
+        "https://res.cloudinary.com/ncsxit25/image/upload/v1793558047/tittos-fashion-planet/demo/black-bomber-jacket-2.jpg"
+      ],
+      "categories": [
+        "jackets",
+        "bestsellers"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ]
+    },
+    {
+      "name": "Blue Denim Jacket",
+      "slug": "blue-denim-jacket",
+      "price": 2799,
+      "description": "Rigid blue denim trucker jacket with contrast stitching and chest pockets.",
+      "images": [
+        "https://res.cloudinary.com/ncsxit25/image/upload/v1793558049/tittos-fashion-planet/demo/blue-denim-jacket-1.jpg",
+        "https://res.cloudinary.com/ncsxit25/image/upload/v1793558049/tittos-fashion-planet/demo/blue-denim-jacket-2.jpg"
+      ],
+      "categories": [
+        "jackets"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ]
+    },
+    {
+      "name": "Olive Utility Jacket",
+      "slug": "olive-utility-jacket",
+      "price": 3199,
+      "description": "Button-up utility jacket with four flap pockets in a rugged olive cotton.",
+      "images": [
+        "https://res.cloudinary.com/ncsxit25/image/upload/v1793558050/tittos-fashion-planet/demo/olive-utility-jacket-1.jpg",
+        "https://res.cloudinary.com/ncsxit25/image/upload/v1793558051/tittos-fashion-planet/demo/olive-utility-jacket-2.jpg"
+      ],
+      "categories": [
+        "jackets"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ]
+    },
+    {
+      "name": "Tan Coach Jacket",
+      "slug": "tan-coach-jacket",
+      "price": 2599,
+      "description": "Lightweight snap-button coach jacket in tan. Perfect for transitional weather.",
+      "images": [
+        "https://res.cloudinary.com/ncsxit25/image/upload/v1793558052/tittos-fashion-planet/demo/tan-coach-jacket-1.jpg",
+        "https://res.cloudinary.com/ncsxit25/image/upload/v1793558054/tittos-fashion-planet/demo/tan-coach-jacket-2.jpg"
+      ],
+      "categories": [
+        "jackets"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ]
+    },
+    {
+      "name": "Classic Indigo Straight Jeans",
+      "slug": "classic-indigo-straight-jeans",
+      "price": 1699,
+      "description": "Straight-fit jeans in mid-weight indigo denim.",
+      "images": [
+        "https://res.cloudinary.com/ncsxit25/image/upload/v1793558055/tittos-fashion-planet/demo/classic-indigo-straight-jeans-1.jpg",
+        "https://res.cloudinary.com/ncsxit25/image/upload/v1793558056/tittos-fashion-planet/demo/classic-indigo-straight-jeans-2.jpg"
+      ],
+      "categories": [
+        "jeans",
+        "bestsellers"
+      ],
+      "sizes": [
+        "28",
+        "30",
+        "32",
+        "34",
+        "36"
+      ]
+    },
+    {
+      "name": "Black Slim Fit Jeans",
+      "slug": "black-slim-fit-jeans",
+      "price": 1799,
+      "description": "Slim-fit black jeans with a hint of stretch for all-day comfort.",
+      "images": [
+        "https://res.cloudinary.com/ncsxit25/image/upload/v1793558057/tittos-fashion-planet/demo/black-slim-fit-jeans-1.jpg",
+        "https://res.cloudinary.com/ncsxit25/image/upload/v1793558058/tittos-fashion-planet/demo/black-slim-fit-jeans-2.jpg"
+      ],
+      "categories": [
+        "jeans"
+      ],
+      "sizes": [
+        "28",
+        "30",
+        "32",
+        "34",
+        "36"
+      ]
+    },
+    {
+      "name": "Light Wash Baggy Jeans",
+      "slug": "light-wash-baggy-jeans",
+      "price": 1999,
+      "description": "Baggy wide-leg jeans in a light wash for a relaxed streetwear look.",
+      "images": [
+        "https://res.cloudinary.com/ncsxit25/image/upload/v1793558059/tittos-fashion-planet/demo/light-wash-baggy-jeans-1.jpg",
+        "https://res.cloudinary.com/ncsxit25/image/upload/v1793558060/tittos-fashion-planet/demo/light-wash-baggy-jeans-2.jpg"
+      ],
+      "categories": [
+        "jeans",
+        "bestsellers"
+      ],
+      "sizes": [
+        "28",
+        "30",
+        "32",
+        "34",
+        "36"
+      ]
+    },
+    {
+      "name": "Grey Washed Tapered Jeans",
+      "slug": "grey-washed-tapered-jeans",
+      "price": 1899,
+      "description": "Tapered jeans in a washed grey finish.",
+      "images": [
+        "https://res.cloudinary.com/ncsxit25/image/upload/v1793558061/tittos-fashion-planet/demo/grey-washed-tapered-jeans-1.jpg",
+        "https://res.cloudinary.com/ncsxit25/image/upload/v1793558062/tittos-fashion-planet/demo/grey-washed-tapered-jeans-2.jpg"
+      ],
+      "categories": [
+        "jeans"
+      ],
+      "sizes": [
+        "28",
+        "30",
+        "32",
+        "34",
+        "36"
+      ]
+    },
+    {
+      "name": "Beige Chino Trousers",
+      "slug": "beige-chino-trousers",
+      "price": 1499,
+      "description": "Slim-straight cotton chinos in beige.",
+      "images": [
+        "https://res.cloudinary.com/ncsxit25/image/upload/v1793558063/tittos-fashion-planet/demo/beige-chino-trousers-1.jpg",
+        "https://res.cloudinary.com/ncsxit25/image/upload/v1793558064/tittos-fashion-planet/demo/beige-chino-trousers-2.jpg"
+      ],
+      "categories": [
+        "trousers"
+      ],
+      "sizes": [
+        "28",
+        "30",
+        "32",
+        "34",
+        "36"
+      ]
+    },
+    {
+      "name": "Black Pleated Trousers",
+      "slug": "black-pleated-trousers",
+      "price": 1699,
+      "description": "Single-pleat tailored trousers in black with a relaxed taper.",
+      "images": [
+        "https://res.cloudinary.com/ncsxit25/image/upload/v1793558065/tittos-fashion-planet/demo/black-pleated-trousers-1.jpg",
+        "https://res.cloudinary.com/ncsxit25/image/upload/v1793558066/tittos-fashion-planet/demo/black-pleated-trousers-2.jpg"
+      ],
+      "categories": [
+        "trousers"
+      ],
+      "sizes": [
+        "28",
+        "30",
+        "32",
+        "34",
+        "36"
+      ]
+    },
+    {
+      "name": "Olive Cargo Trousers",
+      "slug": "olive-cargo-trousers",
+      "price": 1799,
+      "description": "Relaxed cargo trousers with roomy side pockets in olive cotton twill.",
+      "images": [
+        "https://res.cloudinary.com/ncsxit25/image/upload/v1793558067/tittos-fashion-planet/demo/olive-cargo-trousers-1.jpg",
+        "https://res.cloudinary.com/ncsxit25/image/upload/v1793558068/tittos-fashion-planet/demo/olive-cargo-trousers-2.jpg"
+      ],
+      "categories": [
+        "trousers",
+        "bestsellers"
+      ],
+      "sizes": [
+        "28",
+        "30",
+        "32",
+        "34",
+        "36"
+      ]
+    },
+    {
+      "name": "Navy Formal Trousers",
+      "slug": "navy-formal-trousers",
+      "price": 1599,
+      "description": "Flat-front formal trousers in navy with a clean crease.",
+      "images": [
+        "https://res.cloudinary.com/ncsxit25/image/upload/v1793558069/tittos-fashion-planet/demo/navy-formal-trousers-1.jpg",
+        "https://res.cloudinary.com/ncsxit25/image/upload/v1793558070/tittos-fashion-planet/demo/navy-formal-trousers-2.jpg"
+      ],
+      "categories": [
+        "trousers"
+      ],
+      "sizes": [
+        "28",
+        "30",
+        "32",
+        "34",
+        "36"
+      ]
+    }
+  ]
+}

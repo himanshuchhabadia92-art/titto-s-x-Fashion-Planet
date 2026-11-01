@@ -1,6 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
   provider = "prisma-client"
   output   = "../src/generated/prisma"
@@ -10,57 +7,93 @@ datasource db {
   provider = "postgresql"
 }
 
-model User {
-  id        String   @id @default(cuid())
-  email     String   @unique
-  password  String?
-  name      String?
-  role      Role     @default(USER)
-  orders    Order[]
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+model Admin {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  passwordHash String
+  createdAt    DateTime @default(now())
+}
+
+model Category {
+  id        String    @id @default(cuid())
+  name      String
+  slug      String    @unique
+  image     String?
+  sortOrder Int       @default(0)
+  products  Product[]
 }
 
 model Product {
-  id          String   @id @default(cuid())
+  id          String        @id @default(cuid())
   name        String
-  description String
-  price       Float
+  slug        String        @unique
+  description String        @default("")
+  price       Int // rupees
   images      String[]
-  category    String
-  stock       Int      @default(0)
-  isFeatured  Boolean  @default(false)
+  categories  Category[]
+  sizes       ProductSize[]
   orderItems  OrderItem[]
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+}
+
+model ProductSize {
+  id        String  @id @default(cuid())
+  productId String
+  product   Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+  size      String
+  stock     Int     @default(0)
+
+  @@unique([productId, size])
+}
+
+model Customer {
+  id           String    @id @default(cuid())
+  name         String
+  email        String    @unique
+  phone        String
+  // Set when the customer registers an account. Guest checkouts leave both empty.
+  passwordHash String?
+  // Account order history only shows orders placed after this moment, so registering
+  // with an email used earlier as a guest never reveals that guest's past orders.
+  registeredAt DateTime?
+  orders       Order[]
+  createdAt    DateTime  @default(now())
 }
 
 model Order {
-  id          String      @id @default(cuid())
-  userId      String
-  user        User        @relation(fields: [userId], references: [id])
-  status      OrderStatus @default(PENDING)
-  totalAmount Float
-  items       OrderItem[]
-  createdAt   DateTime    @default(now())
-  updatedAt   DateTime    @updatedAt
+  id                Int           @id @default(autoincrement())
+  publicId          String        @unique @default(cuid())
+  customerId        String
+  customer          Customer      @relation(fields: [customerId], references: [id])
+  status            OrderStatus   @default(PENDING)
+  paymentMethod     PaymentMethod
+  paymentStatus     PaymentStatus @default(PENDING)
+  razorpayOrderId   String?       @unique
+  razorpayPaymentId String?
+  total             Int // rupees
+  shipName          String
+  shipPhone         String
+  shipAddress       String
+  shipCity          String
+  shipState         String
+  shipPincode       String
+  items             OrderItem[]
+  createdAt         DateTime      @default(now())
+  updatedAt         DateTime      @updatedAt
 }
 
 model OrderItem {
   id        String   @id @default(cuid())
-  orderId   String
-  order     Order    @relation(fields: [orderId], references: [id])
-  productId String
-  product   Product  @relation(fields: [productId], references: [id])
+  orderId   Int
+  order     Order    @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  productId String?
+  product   Product? @relation(fields: [productId], references: [id], onDelete: SetNull)
+  name      String
+  image     String?
+  size      String
+  price     Int
   quantity  Int
-  price     Float
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-}
-
-enum Role {
-  USER
-  ADMIN
 }
 
 enum OrderStatus {
@@ -69,4 +102,34 @@ enum OrderStatus {
   SHIPPED
   DELIVERED
   CANCELLED
+}
+
+enum PaymentMethod {
+  ONLINE
+  COD
+}
+
+enum PaymentStatus {
+  PENDING
+  PAID
+  FAILED
+}
+
+enum OtpPurpose {
+  SIGNUP
+  RESET
+}
+
+// One-time email codes for signing up and resetting a password.
+model EmailOtp {
+  id        String     @id @default(cuid())
+  email     String
+  purpose   OtpPurpose
+  codeHash  String
+  payload   Json?
+  attempts  Int        @default(0)
+  expiresAt DateTime
+  createdAt DateTime   @default(now())
+
+  @@unique([email, purpose])
 }

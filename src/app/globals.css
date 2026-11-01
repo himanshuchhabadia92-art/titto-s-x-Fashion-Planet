@@ -14,13 +14,6 @@
   --background: var(--color-brand-white);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground: var(--color-brand-white);
-    --background: var(--color-brand-black);
-  }
-}
-
 body {
   color: var(--foreground);
   background: var(--background);
