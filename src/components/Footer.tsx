@@ -49,8 +49,15 @@ export default function Footer({ categories }: { categories: { name: string; slu
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-12 pt-8">
+        <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           <p className="text-gray-500 text-sm">&copy; {new Date().getFullYear()} Titto&apos;s X Fashion Planet. All rights reserved.</p>
+          <ul className="flex flex-wrap gap-x-6 gap-y-2">
+            <li><Link href="/contact" className={linkCls}>Contact Us</Link></li>
+            <li><Link href="/privacy-policy" className={linkCls}>Privacy Policy</Link></li>
+            <li><Link href="/terms-and-conditions" className={linkCls}>Terms &amp; Conditions</Link></li>
+            <li><Link href="/refund-policy" className={linkCls}>Refund &amp; Returns</Link></li>
+            <li><Link href="/shipping-policy" className={linkCls}>Shipping Policy</Link></li>
+          </ul>
         </div>
       </div>
     </footer>

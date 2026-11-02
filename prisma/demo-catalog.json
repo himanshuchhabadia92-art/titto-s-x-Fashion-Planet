@@ -7,39 +7,45 @@
       "image": "https://res.cloudinary.com/ncsxit25/image/upload/v1793558022/tittos-fashion-planet/demo/classic-black-oversized-tee-1.jpg"
     },
     {
+      "name": "Full Sleeve T-Shirts",
+      "slug": "full-tshirts",
+      "sortOrder": 2,
+      "image": "https://res.cloudinary.com/ncsxit25/image/upload/v1793631008/tittos-fashion-planet/demo/black-full-sleeve-tee-1.jpg"
+    },
+    {
       "name": "Shirts",
       "slug": "shirts",
-      "sortOrder": 2,
+      "sortOrder": 3,
       "image": "https://res.cloudinary.com/ncsxit25/image/upload/v1793558030/tittos-fashion-planet/demo/white-oxford-shirt-1.jpg"
     },
     {
       "name": "Hoodies",
       "slug": "hoodies",
-      "sortOrder": 3,
+      "sortOrder": 4,
       "image": "https://res.cloudinary.com/ncsxit25/image/upload/v1793558038/tittos-fashion-planet/demo/black-heavyweight-hoodie-1.jpg"
     },
     {
       "name": "Jackets",
       "slug": "jackets",
-      "sortOrder": 4,
+      "sortOrder": 5,
       "image": "https://res.cloudinary.com/ncsxit25/image/upload/v1793558047/tittos-fashion-planet/demo/black-bomber-jacket-1.jpg"
     },
     {
       "name": "Jeans",
       "slug": "jeans",
-      "sortOrder": 5,
+      "sortOrder": 6,
       "image": "https://res.cloudinary.com/ncsxit25/image/upload/v1793558055/tittos-fashion-planet/demo/classic-indigo-straight-jeans-1.jpg"
     },
     {
       "name": "Trousers",
       "slug": "trousers",
-      "sortOrder": 6,
+      "sortOrder": 7,
       "image": "https://res.cloudinary.com/ncsxit25/image/upload/v1793558063/tittos-fashion-planet/demo/beige-chino-trousers-1.jpg"
     },
     {
       "name": "Bestsellers",
       "slug": "bestsellers",
-      "sortOrder": 7,
+      "sortOrder": 8,
       "image": "https://res.cloudinary.com/ncsxit25/image/upload/v1793558022/tittos-fashion-planet/demo/classic-black-oversized-tee-1.jpg"
     }
   ],
@@ -530,6 +536,107 @@
         "32",
         "34",
         "36"
+      ]
+    },
+    {
+      "name": "Black Full Sleeve Tee",
+      "slug": "black-full-sleeve-tee",
+      "price": 999,
+      "description": "Full-sleeve cotton tee in black with ribbed cuffs and a relaxed boxy fit.",
+      "images": [
+        "https://res.cloudinary.com/ncsxit25/image/upload/v1793631008/tittos-fashion-planet/demo/black-full-sleeve-tee-1.jpg",
+        "https://res.cloudinary.com/ncsxit25/image/upload/v1793631009/tittos-fashion-planet/demo/black-full-sleeve-tee-2.jpg"
+      ],
+      "categories": [
+        "full-tshirts"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ]
+    },
+    {
+      "name": "Off-White Full Sleeve Tee",
+      "slug": "off-white-full-sleeve-tee",
+      "price": 999,
+      "description": "Soft full-sleeve tee in off-white. Easy to wear alone or layered.",
+      "images": [
+        "https://res.cloudinary.com/ncsxit25/image/upload/v1793631011/tittos-fashion-planet/demo/off-white-full-sleeve-tee-1.jpg",
+        "https://res.cloudinary.com/ncsxit25/image/upload/v1793631012/tittos-fashion-planet/demo/off-white-full-sleeve-tee-2.jpg"
+      ],
+      "categories": [
+        "full-tshirts"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ]
+    },
+    {
+      "name": "Navy Full Sleeve Stripe Tee",
+      "slug": "navy-full-sleeve-stripe-tee",
+      "price": 1099,
+      "description": "Navy full-sleeve tee with a chest stripe detail.",
+      "images": [
+        "https://res.cloudinary.com/ncsxit25/image/upload/v1793631014/tittos-fashion-planet/demo/navy-full-sleeve-stripe-tee-1.jpg",
+        "https://res.cloudinary.com/ncsxit25/image/upload/v1793631015/tittos-fashion-planet/demo/navy-full-sleeve-stripe-tee-2.jpg"
+      ],
+      "categories": [
+        "full-tshirts"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ]
+    },
+    {
+      "name": "Grey Full Sleeve Bolt Tee",
+      "slug": "grey-full-sleeve-bolt-tee",
+      "price": 1049,
+      "description": "Grey full-sleeve tee with a bold bolt graphic print.",
+      "images": [
+        "https://res.cloudinary.com/ncsxit25/image/upload/v1793631016/tittos-fashion-planet/demo/grey-full-sleeve-bolt-tee-1.jpg",
+        "https://res.cloudinary.com/ncsxit25/image/upload/v1793631017/tittos-fashion-planet/demo/grey-full-sleeve-bolt-tee-2.jpg"
+      ],
+      "categories": [
+        "full-tshirts"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ]
+    },
+    {
+      "name": "Maroon Sunset Full Sleeve Tee",
+      "slug": "maroon-sunset-full-sleeve-tee",
+      "price": 1149,
+      "description": "Maroon full-sleeve tee with a sunset graphic on the chest.",
+      "images": [
+        "https://res.cloudinary.com/ncsxit25/image/upload/v1793631019/tittos-fashion-planet/demo/maroon-sunset-full-sleeve-tee-1.jpg",
+        "https://res.cloudinary.com/ncsxit25/image/upload/v1793631020/tittos-fashion-planet/demo/maroon-sunset-full-sleeve-tee-2.jpg"
+      ],
+      "categories": [
+        "full-tshirts",
+        "bestsellers"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
       ]
     }
   ]

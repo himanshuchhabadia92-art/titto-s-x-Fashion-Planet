@@ -41,10 +41,12 @@ const buttons = (x, ys, color) => ys.map((y) => `<circle cx="${x}" cy="${y}" r="
 
 /* ---------- garments ---------- */
 function tee(c, o = {}) {
-  const body = o.boxy
-    ? "M250 150 L150 205 L85 350 L175 395 L215 330 L215 830 L535 830 L535 330 L575 395 L665 350 L600 205 L500 150 Q375 235 250 150 Z"
-    : "M255 150 L170 195 L120 330 L195 365 L245 310 L245 820 L505 820 L505 310 L555 365 L630 330 L580 195 L495 150 Q375 235 255 150 Z";
-  const arm = o.boxy ? [215, 330] : [245, 310];
+  const body = o.long
+    ? "M250 150 L165 185 L95 700 L175 715 L215 400 L215 830 L535 830 L535 400 L575 715 L655 700 L585 185 L500 150 Q375 235 250 150 Z"
+    : o.boxy
+      ? "M250 150 L150 205 L85 350 L175 395 L215 330 L215 830 L535 830 L535 330 L575 395 L665 350 L600 205 L500 150 Q375 235 250 150 Z"
+      : "M255 150 L170 195 L120 330 L195 365 L245 310 L245 820 L505 820 L505 310 L555 365 L630 330 L580 195 L495 150 Q375 235 255 150 Z";
+  const arm = o.long ? [215, 400] : o.boxy ? [215, 330] : [245, 310];
   const hem = o.boxy ? [215, 535, 805] : [245, 505, 795];
   let s = `<path d="${body}" fill="${c}"/><path d="${body}" fill="url(#fab${o.id})"/>`;
   s += line(`M${o.boxy ? 250 : 255} 150 L${arm[0]} ${arm[1]}`, dark(c, 0.3), 2.5, 0.6);
@@ -53,6 +55,7 @@ function tee(c, o = {}) {
   s += `<path d="M285 156 Q375 200 465 156 Q375 215 285 156 Z" fill="${dark(c, 0.45)}" opacity=".45"/>`;
   s += stitch(`M${hem[0] + 4} ${hem[2]} L${hem[1] - 4} ${hem[2]}`, dark(c, 0.3), 2);
   s += line(`M300 420 Q330 520 310 700`, "#000", 6, 0.05) + line(`M470 440 Q440 560 465 720`, "#000", 6, 0.05);
+  if (o.long) s += `<path d="M92 685 L172 700 L176 728 L96 713 Z" fill="${dark(c, 0.2)}"/><path d="${mirror("M92 685 L172 700 L176 728 L96 713 Z")}" fill="${dark(c, 0.2)}"/>`;
   if (o.graphic) s += graphic(o.graphic, c);
   return s;
 }
@@ -222,12 +225,13 @@ const B = ["28", "30", "32", "34", "36"];
 
 const categories = [
   { name: "T-Shirts", slug: "tshirts", sortOrder: 1 },
-  { name: "Shirts", slug: "shirts", sortOrder: 2 },
-  { name: "Hoodies", slug: "hoodies", sortOrder: 3 },
-  { name: "Jackets", slug: "jackets", sortOrder: 4 },
-  { name: "Jeans", slug: "jeans", sortOrder: 5 },
-  { name: "Trousers", slug: "trousers", sortOrder: 6 },
-  { name: "Bestsellers", slug: "bestsellers", sortOrder: 7 },
+  { name: "Full Sleeve T-Shirts", slug: "full-tshirts", sortOrder: 2 },
+  { name: "Shirts", slug: "shirts", sortOrder: 3 },
+  { name: "Hoodies", slug: "hoodies", sortOrder: 4 },
+  { name: "Jackets", slug: "jackets", sortOrder: 5 },
+  { name: "Jeans", slug: "jeans", sortOrder: 6 },
+  { name: "Trousers", slug: "trousers", sortOrder: 7 },
+  { name: "Bestsellers", slug: "bestsellers", sortOrder: 8 },
 ];
 
 // kind, name, price, color, opts, category, bestseller, description
@@ -256,6 +260,11 @@ const products = [
   ["trousers", "Black Pleated Trousers", 1699, "#1d1d1f", { pleat: true }, "trousers", false, "Single-pleat tailored trousers in black with a relaxed taper."],
   ["trousers", "Olive Cargo Trousers", 1799, "#5e6445", { cargo: true }, "trousers", true, "Relaxed cargo trousers with roomy side pockets in olive cotton twill."],
   ["trousers", "Navy Formal Trousers", 1599, "#252f45", {}, "trousers", false, "Flat-front formal trousers in navy with a clean crease."],
+  ["tee", "Black Full Sleeve Tee", 999, "#161616", { long: true, boxy: true, graphic: "mini" }, "full-tshirts", false, "Full-sleeve cotton tee in black with ribbed cuffs and a relaxed boxy fit."],
+  ["tee", "Off-White Full Sleeve Tee", 999, "#ece7da", { long: true, boxy: true }, "full-tshirts", false, "Soft full-sleeve tee in off-white. Easy to wear alone or layered."],
+  ["tee", "Navy Full Sleeve Stripe Tee", 1099, "#26334f", { long: true, boxy: true, graphic: "stripes" }, "full-tshirts", false, "Navy full-sleeve tee with a chest stripe detail."],
+  ["tee", "Grey Full Sleeve Bolt Tee", 1049, "#7d7f84", { long: true, boxy: true, graphic: "bolt" }, "full-tshirts", false, "Grey full-sleeve tee with a bold bolt graphic print."],
+  ["tee", "Maroon Sunset Full Sleeve Tee", 1149, "#6d2a33", { long: true, boxy: true, graphic: "sun" }, "full-tshirts", true, "Maroon full-sleeve tee with a sunset graphic on the chest."],
 ];
 
 const slugify = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
@@ -287,12 +296,16 @@ if (upload) cloudinary = (await import("cloudinary")).v2.config({
 }) && (await import("cloudinary")).v2;
 
 const sheet = [];
-const result = { categories: [], products: [] };
+// --only-new: keep the existing prisma/demo-catalog.json products and only render/upload the missing ones
+const onlyNew = process.argv.includes("--only-new");
+const existing = onlyNew ? JSON.parse(fs.readFileSync("prisma/demo-catalog.json", "utf8")) : null;
+const result = { categories: [], products: existing ? [...existing.products] : [] };
 
 for (let i = 0; i < products.length; i++) {
   const p = products[i];
   const [kind, name, price, , , cat, best, description] = p;
   const slug = slugify(name);
+  if (existing?.products.some((e) => e.slug === slug)) continue;
   const bufs = await renderImages(p, i);
   fs.writeFileSync(path.join(outDir, `${slug}-1.jpg`), bufs[0]);
   sheet.push(await sharp(bufs[0]).resize(250, 333).toBuffer());
