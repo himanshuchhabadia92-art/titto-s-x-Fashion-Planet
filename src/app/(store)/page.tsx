@@ -40,22 +40,22 @@ export default async function Home() {
     <div className="flex flex-col min-h-screen">
       {/* 1. Hero */}
       <section className="relative h-[100svh] w-full flex flex-col justify-between overflow-hidden bg-black pt-6">
-        <div className="absolute inset-0 z-0 w-full h-full">
-          <Image src="/hero-bg-mobile.jpg" alt="Titto's streetwear models" fill sizes="100vw" className="block md:hidden object-cover object-top animate-slow-zoom" priority />
-          <Image src="/hero-bg-animated.jpg" alt="Titto's streetwear models with a vintage Porsche" fill sizes="100vw" className="hidden md:block object-cover object-center animate-slow-zoom" priority />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/70 pointer-events-none z-10" />
-        </div>
-
-        <div className="relative z-20 flex flex-col items-center justify-center text-center px-4 pt-24 sm:pt-28 md:pt-36">
-          <h1 className="text-5xl sm:text-7xl md:text-8xl font-display font-black text-white uppercase tracking-tighter drop-shadow-[0_5px_15px_rgba(0,0,0,0.9)] italic -skew-x-6">
-            TITTO&apos;S
+        {/* The logo file has a lot of empty margin, so it is scaled up inside a clipped square. */}
+        <div className="flex-grow flex items-center justify-center px-4 pt-24 sm:pt-28">
+          <h1 className="relative aspect-square w-[min(86vw,56svh)] overflow-hidden">
+            <span className="sr-only">Titto&apos;s X Fashion Planet</span>
+            <Image
+              src="/logo-white.png"
+              alt=""
+              width={2000}
+              height={1414}
+              sizes="(min-width: 768px) 1200px, 190vw"
+              style={{ width: "172%" }}
+              className="absolute top-1/2 left-1/2 max-w-none -translate-x-1/2 -translate-y-1/2"
+              priority
+            />
           </h1>
-          <p className="text-white/90 text-xs sm:text-sm md:text-lg font-bold uppercase tracking-widest mt-3 max-w-md drop-shadow-md">
-            Anime • Mythology • Graphic Culture
-          </p>
         </div>
-
-        <div className="flex-grow pointer-events-none" />
 
         <div className="relative z-20 flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4 pb-8 sm:pb-12 md:pb-16 px-4">
           <Link href="/collections/all" className="bg-[#8cc665] text-black px-10 py-3.5 sm:px-12 sm:py-4 text-base sm:text-lg font-bold hover:bg-[#7ab056] transition-colors shadow-lg uppercase tracking-widest">
